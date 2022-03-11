@@ -15,13 +15,13 @@ def last_digit_of_fibonacci_number(n):
 
     lst = [0, 1]
     for i in range(2, n + 1):
-        next_num = (lst[i - 1] + lst[i - 2])
+        next_num = (lst [i - 1] + lst [i - 2])
         lst.append(next_num)
+
     return lst[n] % 10
 
 
 if __name__ == '__main__':
     # input_n = int(input())
     # print(last_digit_of_fibonacci_number(input_n))
-    n = 40
-    print(last_digit_of_fibonacci_number(n))
+    print(last_digit_of_fibonacci_number(613455))

@@ -16,7 +16,6 @@ class TestGCD(unittest.TestCase):
     #         numbers = [randint(0, max_number) for _ in range(array_size)]
     #         self.assertEqual(max_pairwise_product(list(numbers)), max_pairwise_product_naive(numbers))
 
-
     def test_large(self):
         for (a, b, d) in [(28851538, 1183019, 17657), (357654894, 134457912, 6)]:
             self.assertEqual(gcd(a, b), d)

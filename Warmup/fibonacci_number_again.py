@@ -35,6 +35,6 @@ def pisano_period(m):
 
 
 if __name__ == '__main__':
-    # input_n, input_m = map(int, input().split())
-    # print(fibonacci_number_again(input_n, input_m))
-    print(fibonacci_number_again(5, 3))
+    input_n, input_m = map(int, input().split())
+    print(fibonacci_number_again(input_n, input_m))
+

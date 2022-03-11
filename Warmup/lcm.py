@@ -29,7 +29,6 @@ def lcm(a, b):
 
 
 if __name__ == '__main__':
-    # input_a, input_b = map(int, input().split())
-    # print(lcm(input_a, input_b))
-    a, b = 456583, 68989
-    print(lcm(a,b))
+    input_a, input_b = map(int, input().split())
+    print(lcm(input_a, input_b))
+
