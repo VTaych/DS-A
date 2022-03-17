@@ -1,6 +1,5 @@
 # python3
 
-
 def last_digit_of_fibonacci_number_naive(n):
     assert 0 <= n <= 10 ** 7
 
@@ -13,15 +12,40 @@ def last_digit_of_fibonacci_number_naive(n):
 def last_digit_of_fibonacci_number(n):
     assert 0 <= n <= 10 ** 7
 
-    lst = [0, 1]
-    for i in range(2, n + 1):
-        next_num = (lst [i - 1] + lst [i - 2])
-        lst.append(next_num)
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
 
-    return lst[n] % 10
+    prev_value = 0
+    current_value = 1
+
+    for i in range(2, n + 1):
+        temp = (prev_value + current_value) % 10
+        prev_value = current_value
+        current_value = temp
+
+    return current_value % 10
+
+
+def last_digit_of_fibonacci_number2(n):
+    assert 0 <= n <= 10 ** 7
+
+    if n < 2:
+        return n
+
+    a, b, c = 1, 1, 0
+    for d in bin(n)[3:]:
+        num = b * b
+        a, b, c = a * a + num, (a + c) * b, num + c * c
+
+        if d == '1':
+            a, b, c = a + b, a, b
+
+    return b
 
 
 if __name__ == '__main__':
-    # input_n = int(input())
-    # print(last_digit_of_fibonacci_number(input_n))
-    print(last_digit_of_fibonacci_number(613455))
+    input_n = int(input())
+    print(last_digit_of_fibonacci_number(input_n))
+

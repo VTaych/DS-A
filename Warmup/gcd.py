@@ -22,10 +22,7 @@ def gcd(a, b):
     return gcd(b, aa)
 
 
-
 if __name__ == '__main__':
     input_a, input_b = map(int, input().split())
     print(gcd(input_a, input_b))
-    # a = 357654894
-    # b = 134457912
-    # print(gcd(a, b))
+

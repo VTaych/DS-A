@@ -2,7 +2,7 @@
 
 
 def fibonacci_number_naive(n):
-    assert 0 <= n <= 45
+    # assert 0 <= n <= 45
 
     if n <= 1:
         return n
@@ -11,12 +11,12 @@ def fibonacci_number_naive(n):
 
 
 def fibonacci_number(n):
-    assert 0 <= n <= 45
+    # assert 0 <= n <= 45
     lst = [0, 1]
     for i in range(2, n+1):
         next_num = lst[i - 1] + lst[i - 2]
         lst.append(next_num)
-    return lst[n]
+    return lst
 
 
 if __name__ == '__main__':
